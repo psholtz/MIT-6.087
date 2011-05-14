@@ -1,5 +1,13 @@
 /*
 
+ The preprocessor will evaluate the expression as follows:
+ 
+  18.0/squared(2+1)
+  18.0/((2+1)*(2+1))
+  18.0/(3*3)
+  18.0/9
+  2.0
+
  The value of ans is 2.0.
  */
 #include <stdio.h>

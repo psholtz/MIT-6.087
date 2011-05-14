@@ -1,7 +1,8 @@
 /***********************************
  Problem 1.4
  
- The following lines of code, when arranged in the proper sequence, output the simple message "All your base are belong to us."
+ The following lines of code, when arranged in the proper sequence, 
+ output the simple message "All your base are belong to us."
 
   1. return 0;
   2. const char msg[] = MSG1;

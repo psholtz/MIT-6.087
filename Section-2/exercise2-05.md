@@ -7,10 +7,21 @@ Determine if the following statements have any errors:
 * int 2nd_value = 10;
 * alliszero = (x=1) && (y=0); (with x = 0; y = 0; alliszero = 1;)
 * y=++x+y;z=z-->x; (with x = 10; y = 3; z = 0;)
+* Assume that we want to test if the last four bits of x are on (with int MASK=0xF; ison = x & MASK==MASK;)
 ```
 
 Solution
 -------- 
+
+**Question 1**
+
+```c
+int 2nd_value = 10;
+```
+
+The qustion `states` now.
+
+fgfg
 
 /**
  * Problem 2.5: Determine if the following statements have any errors.

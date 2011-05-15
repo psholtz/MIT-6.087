@@ -27,7 +27,13 @@ Perhaps a statement more similar to the following could be useD:
 int value_2 = 10;
 ```
 
+**Question 2**
 
+```c
+int x = 0;
+int y = 0;
+int alliszero = 1;
+```
 /**
  * Problem 2.5: Determine if the following statements have any errors.
  *

@@ -5,7 +5,8 @@ Determine if the following statements have any errors:
 
 ```c
 * int 2nd_value = 10;
-* alliszero = (x=1) && (y=0);
+* alliszero = (x=1) && (y=0); (with x = 0; y = 0; alliszero = 1;)
+* y=++x+y;z=z-->x; (with x = 10; y = 3; z = 0;)
 ```
 
 Solution

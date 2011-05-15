@@ -5,6 +5,7 @@
  *
  * Solution: Given in code below.
  */
+
 #include <stdio.h>
 
 /**

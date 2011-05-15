@@ -58,7 +58,7 @@ z=z-->x;
 
 These are valid C statements.
 
-The first statement, `y=++x+y`, will evaluate as follows: the prefix increment operator ++ will first increment x from 10 to 11. This value will be added to the value of y, 3, and the new value, 14, will be stored in y. 
+The first statement, `y=++x+y`, will evaluate as follows: the prefix increment operator ++ will first increment x from 10 to 11. This value will then be added to the value of y, 3, and the new value, 14, will be stored in y. 
 
 After the first statement is evaluated, the values stored in the variables will be:
 
@@ -68,7 +68,7 @@ y <-- 14
 z <-- 0
 ```
 
-The second statement, `z=z-->x;`, will evaluate as follows: the postfix decrement operator -- has highest precedence, but will execute only AFTER the expression is evaluated. Hence, during expression evaluation, we will take the (present) value of z, and see whether it is larger than x, which is 11. The answer is no, z is not larger than x. Hence the "answer" stored in z will be zero. But at this point, the postfix decrement operator will be applied to z and reduce it by 1. 
+The second statement, `z=z-->x;`, will evaluate as follows: the postfix decrement operator -- has the highest precedence, but will execute only AFTER the expression is evaluated. Hence, during expression evaluation, we will take the (present) value of z, and see whether it is larger than x, which is 11. The answer is no, z is not larger than x. Hence the "answer" stored in z will be zero. But at this point, expression evaluation terminates and the postfix decrement operator will be applied to z and reduce it by 1. 
 
 Hence, the final value stored in z will be -1. 
 
@@ -80,7 +80,7 @@ y <-- 14
 z <-- -1 
 ```
 
-The expressions could perhaps be expressed more succinctly using parentheses:
+The expressions could perhaps be expressed more clearly using parentheses:
 
 ```c
 y = (++x) + y;

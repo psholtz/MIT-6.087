@@ -54,6 +54,9 @@ void test1p() {
   puts("");
 }
 
+/**
+ * Run second test, without the parenthees.
+ */
 void test2() {
   puts("==========");
   puts("  Test 2");
@@ -63,6 +66,24 @@ void test2() {
   int x = 10, y = 2, z = 2;
   printf(" %d %d %d\n",x,y,z);
   z = y = x++ + ++y*2;
+  printf(" %d %d %d\n",x,y,z);
+
+  puts("==========");
+  puts("");
+}
+
+/**
+ * Run second test, with the parentheses.
+ */
+void test2p() {
+  puts("==========");
+  puts("  Test 2");
+  puts("----------");
+  puts("");
+
+  int x = 10, y = 2, z = 2;
+  printf(" %d %d %d\n",x,y,z);
+  z = y = (x++) + ((++y)*2);
   printf(" %d %d %d\n",x,y,z);
 
   puts("==========");
@@ -90,6 +111,8 @@ int main(void) {
   test1p();
 
   test2();
+  test2p();
+
   test3();
 
   return 0;

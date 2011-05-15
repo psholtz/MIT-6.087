@@ -39,3 +39,14 @@ Specifically, x & MASK == MASK, that is, the register expression for x & MASK is
 1111 1111 0000 0000
 
 and the bitwise AND combination of x & MASK and 0 will still evaluate to 0.
+
+**Question 2**
+
+```c
+x = 10;
+y = 2;
+z = 2;
+z = y = x++ + ++y*2;
+```
+
+This expression will result in the same value being stored in the variables y and z.

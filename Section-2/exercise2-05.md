@@ -1,3 +1,16 @@
+Problem 2.5
+=========== 
+
+Determine if the following statements have any errors: 
+
+```c
+* int 2nd_value = 10;
+* alliszero = (x=1) && (y=0);
+```
+
+Solution
+-------- 
+
 /**
  * Problem 2.5: Determine if the following statements have any errors.
  *

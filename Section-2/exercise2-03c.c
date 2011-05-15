@@ -14,6 +14,7 @@
  *  1110 1100 1010 1111 (60591)
  *
  */
+
 #include <stdio.h>
 #include <math.h>
 

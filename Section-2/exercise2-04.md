@@ -32,4 +32,10 @@ The expression MASK == 0 evaluates to 0, and the bitwise AND combination of x an
 
 Therefore, the variable c will contain 0.
 
-Interestingly, if we render the parentheses the other way, we still get the same answer:
+Interestingly, if we render the parentheses the other way, we still get the same answer.
+
+Specifically, x & MASK == MASK, that is, the register expression for x & MASK is:
+
+1111 1111 0000 0000
+
+and the bitwise AND combination of x & MASK and 0 will likewise evaluate to 0.

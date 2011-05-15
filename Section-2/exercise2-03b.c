@@ -9,7 +9,7 @@
  *
  *  1100 1010 1111 1110 (51966)
  * 
- * To shift these values by four bits, we will produce:
+ * To reverse the byte order on this number, we will produce:
  *
  *  1111 1110 1100 1010 (65226)
  *

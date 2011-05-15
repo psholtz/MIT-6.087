@@ -19,9 +19,14 @@ Solution
 int 2nd_value = 10;
 ```
 
-The qustion `states` now.
+The error with this statement is that in C variables may not begin with numbers. 
 
-fgfg
+Perhaps a statement more similar to the following could be useD:
+
+```c
+int value_2 = 10;
+```
+
 
 /**
  * Problem 2.5: Determine if the following statements have any errors.

@@ -87,6 +87,30 @@ y = (++x) + y;
 z = (z--) > x;
 ```
 
+**Question 4**
+
+```c
+int MASK = 0xF;
+int ison = x & MASK == MASK;
+```
+
+The problem with this statement is that the equivalence relation has higher precedence than the logical AND operation. In other words, the above code will evaluate as:
+
+```c
+int ison = x & (MASK == MASK);
+```
+
+Since `(MASK==MASK)` always evaluates to true (i.e., 1), the code merely tests whether the last bit of x is turned on. 
+
+For example, `x=1` will give a signal of `ison=1`, even though only 1 bit of x is on, and not all four.
+
+The correct code should be written as:
+
+```c
+int MASK = 0xF;
+int ison = ( x & MASK ) == MASK;
+```
+
 /**
  * Problem 2.5: Determine if the following statements have any errors.
  *

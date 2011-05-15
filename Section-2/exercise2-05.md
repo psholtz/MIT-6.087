@@ -21,7 +21,7 @@ int 2nd_value = 10;
 
 The error with this statement is that in C variables may not begin with numbers. 
 
-Perhaps a statement more similar to the following could be useD:
+Perhaps a statement more similar to the following could be used:
 
 ```c
 int value_2 = 10;
@@ -33,7 +33,19 @@ int value_2 = 10;
 int x = 0;
 int y = 0;
 int alliszero = 1;
+alliszero = (x=1) && (y=0);
 ```
+
+The statement is correct, if in fact the author intends what actually occurs.
+
+The statements `x=1` and `y=0` are assigments, not logical equivalence relations. 
+
+The "values" assigned to these assignment statements are 1 and 0, respectively. 
+
+The logical AND of 1 and 0 will yield 0. 
+
+Hence, the value assigned to alliszero will be 0.
+
 /**
  * Problem 2.5: Determine if the following statements have any errors.
  *

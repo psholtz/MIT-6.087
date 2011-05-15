@@ -40,6 +40,14 @@ Specifically, x & MASK == MASK, that is, the register expression for x & MASK is
 
 and the bitwise AND combination of x & MASK and 0 will still evaluate to 0.
 
+When the expression finishes evaluating, the following values are stored in the respective variables:
+
+```c
+x <== 0xFF33
+MASK <== 0xFF00
+c <== 0
+```
+
 **Question 2**
 
 ```c
@@ -50,3 +58,5 @@ z = y = x++ + ++y*2;
 ```
 
 This expression will result in the same value being stored in the variables y and z.
+
+The question is, what value will that be? 

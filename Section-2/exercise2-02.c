@@ -8,6 +8,7 @@
  *
  * Solution: Given below in C code.
  */
+
 #include <stdio.h>
 #include <ctype.h>
 

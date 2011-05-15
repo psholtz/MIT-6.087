@@ -1,11 +1,15 @@
 Exercise 2.4
 ============ 
 
-Using precedence rules, evaluate the following expressions and determine the value of the variables (without running the code). Also write them using parentheses to make the order explicit.
+Using precedence rules, evaluate the following expressions and determine the value of the variables (without running the code).
 
-* c = x & MASK == 0; (with x = 0xFF33; MASK = 0xFF00; )
-* z = y = x++ + ++y*2; (with x = 10; y = 2; z = 2; )
-* y >>= x & 0x2 && z; (with x = 10, y = 4; z = 1; )
+Also write them using parentheses to make the order explicit.
+
+```c
+(1)  c = x & MASK == 0; (with x = 0xFF33; MASK = 0xFF00; )
+(2) z = y = x++ + ++y*2; (with x = 10; y = 2; z = 2; )
+(3) y >>= x & 0x2 && z; (with x = 10, y = 4; z = 1; )
+```
 
 Solution
 -------- 

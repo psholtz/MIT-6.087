@@ -16,6 +16,9 @@
 
 #include <stdio.h>
 
+/**
+ * Run test with no parentheses.
+ */
 void test1() {
   int i[] = { 3, 5 };
   int *p = i;
@@ -27,6 +30,9 @@ void test1() {
   puts("");
 }
 
+/**
+ * Run same test, using parentheses to indicate relative operator precedence.
+ */
 void test2() {
   int i[] = { 3, 5 };
   int *p = i;

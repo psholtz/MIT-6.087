@@ -86,3 +86,26 @@ x <-- 11
 y <-- 16
 z <-- 16
 ```
+
+**Question 3**
+
+```c
+x = 10;
+y = 4;
+z = 1;
+y >>= x & 0x2 && z;
+```
+
+Perhaps the most stranglest looking operator in this expression is >>=, which in fact is simply the bitwise right operator with assignment. Knowing that, we will evaluate the right-hand side of the expression, shift the answer bitwise once to the right, and store the resulting value in y.
+
+We expect that only the value of y will be changed, and that the values of x and z will remain as they are.
+
+& represents bitwise AND, and && represents logical AND. 
+
+Bitwise AND is of higher precedence than logical AND. 
+
+Hence, we can write this expression using parentheses as:
+
+```c
+y >>= ( x & 0x2 ) && z;
+```

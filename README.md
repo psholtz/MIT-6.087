@@ -1,3 +1,3 @@
 Useful Links:
 
-[http://cslibrary.stanford.edu/101/](http://cslibrary.stanford.edu/101/)
+[Essential C (Stanford)](http://cslibrary.stanford.edu/101/

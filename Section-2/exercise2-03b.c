@@ -15,20 +15,26 @@
  *
  */
 #include <stdio.h>
+#include <math.h>
+
+#define BITS_IN_BYTE 8 
 
 /**
- * Function takes an integer argument.
+ * Function takes two integer arguments:
+ *
+ *  val - integer value to be bit-shifted by the right by 1 bit.
+ *  byte - size of the integer argument in bytes.
  *
  * Function returns an integer, which is the argument shifted right by 1 bit.
  * If the least significant bit is turned on, it is moved to the "front" of
  * the answer, cycling it around.
  *
- * Function presumes 2-byte integers, that is, shifting the LSB to the "front"
- * will increase the value of the answer by 2^15 = 32768.
+ * Shifting the LSB to the "front" will increase the value of the answer, by 
+ * an amount commensurate with the size of the integer we are working with.
  */
-int shift_right(int val) {
+int shift_right(int val,int byte) {
   if ( val & 1 ) {
-    return 32768 + (val >> 1);
+    return pow(2, BITS_IN_BYTE * byte - 1) + (val >> 1);
   } else {
     return val >> 1;
   }
@@ -41,13 +47,15 @@ int shift_right(int val) {
  * If the least significant bit is turned on, it is moved to the "front" of
  * the answer, cycling it around.
  *
- * Function presumes 2-byte integers, that is, shifting the LSB to the "front"
+ * Function assumes 2-byte integers, that is, shifting the LSB to the "front"
  * will increase the value of the ansewr by 2^15 = 32768.
+ *
+ * On most architectures, short ints will be implemented as 2-byte integers.
  */
 int rotate_eight(int val) {
   int i;
   for ( i = 0; i < 8; ++i )
-    val = shift_right(val);
+    val = shift_right(val,2);
   return val;
 }
 

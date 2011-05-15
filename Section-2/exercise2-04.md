@@ -43,9 +43,9 @@ and the bitwise AND combination of x & MASK and 0 will still evaluate to 0.
 When the expression finishes evaluating, the following values are stored in the respective variables:
 
 ```c
-x <== 0xFF33
-MASK <== 0xFF00
-c <== 0
+x    <-- 0xFF33
+MASK <-- 0xFF00
+c    <-- 0
 ```
 
 **Question 2**
@@ -60,3 +60,31 @@ z = y = x++ + ++y*2;
 This expression will result in the same value being stored in the variables y and z.
 
 The question is, what value will that be? 
+
+Of the operators in the expression above, the highest precedence is given to the postfix increment/decrement operator ++.
+
+The next highest precedence is given to the prefix increment/decrement operator ++.
+
+Finally, multiplication * has higher precedence than addition +.
+
+Thus, we can write the expression as:
+
+```c
+z = y = (x++) + ((++y)*2);
+```
+
+What values will be stored in these variables after the expression evaluates?
+
+The prefix ++ operator will increment the value of y, and it will do so BEFORE the expression evaluates. Thus, by the time the expression evaluates, the value stored in y is already 3.
+
+The postfix operator ++ will increment the value of x, but only AFTER the expression evaluates. Thus, when the expression evaluates, the value stored in x will still be 10.
+
+Hence, the value stored in y and z will be 16.
+
+After the expression evaluates, the value of x will be increment to 11.
+
+```c
+x <-- 11
+y <-- 16
+z <-- 16
+```

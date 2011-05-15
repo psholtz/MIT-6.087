@@ -12,7 +12,9 @@ MASK = 0xFF00;
 c = x & MASK == 0;
 ```
 
-In C, the relational equality operator == has higher precedence than the bitwise AND operator. Accordingly, we can render the parentheses as:
+In C, the relational equality operator == has higher precedence than the bitwise AND operator. 
+
+Accordingly, we can render the parentheses as:
 
 ```c
 c = x & (MASK == 0);
@@ -25,3 +27,7 @@ The register settings for x look like:
 and the register settings for MASK look like:
 
 1111 1111 0000 0000 
+
+The expression MASK == 0 evaluates to 0, and bitwise AND combination of x and 0 also clearly evaluates to 0.
+
+Therefore, the variable c will contain 0.

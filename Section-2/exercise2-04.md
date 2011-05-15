@@ -28,6 +28,8 @@ and the register settings for MASK look like:
 
 1111 1111 0000 0000 
 
-The expression MASK == 0 evaluates to 0, and bitwise AND combination of x and 0 also clearly evaluates to 0.
+The expression MASK == 0 evaluates to 0, and the bitwise AND combination of x and 0 also clearly evaluates to 0.
 
 Therefore, the variable c will contain 0.
+
+Interestingly, if we render the parentheses the other way, we still get the same answer:

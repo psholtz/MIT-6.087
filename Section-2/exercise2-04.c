@@ -1,5 +1,9 @@
 /**
+ * Problem 2.4: Using precedence rules, evaluate the following expressions
+ * and determine the value of the variables (without running the code).
+ * Also rewrite them using parentheses to make the order explicit.
  *
+ * Solution: Given in code below.
  */
 #include <stdio.h>
 

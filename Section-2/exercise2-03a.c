@@ -1,16 +1,15 @@
-/*
- 
- Problem 2.3: Consider int val=0xCAFE. Write expressions using bitwise 
- operations that do the following:
- 
- * Test if at least three of the last four bits (LSB) are on.
-
- Solution: The bits in the "0xCAFE" register look like:
-
-  1100 1010 1111 1110
-
- Clearly, three of the last four bits are on. Let's see if we can write
- C code to demonstrate this.
+/**
+ * Problem 2.3: Consider int val=0xCAFE. Write expressions using bitwise 
+ * operations that do the following:
+ *
+ *  - Test if at least three of the last four bits (LSB) are on.
+ *
+ * Solution: The bits in the "0xCAFE" register look like:
+ *
+ *  1100 1010 1111 1110
+ *
+ * Clearly, three of the last four bits are on. Let's see if we can write
+ * C code to demonstrate this.
  */
 
 #include <stdio.h>

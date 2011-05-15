@@ -75,9 +75,7 @@ z = y = (x++) + ((++y)*2);
 
 What values will be stored in these variables after the expression evaluates?
 
-The prefix ++ operator will increment the value of y, and it will do so BEFORE the expression evaluates. Thus, by the time the expression evaluates, the value stored in y is already 3.
-
-The postfix operator ++ will increment the value of x, but only AFTER the expression evaluates. Thus, when the expression evaluates, the value stored in x will still be 10.
+The prefix ++ operator will increment the value of y, and it will do so BEFORE the expression evaluates. Thus, by the time the expression evaluates, the value stored in y is already 3. Similarly, the postfix operator ++ will increment the value of x, but only AFTER the expression evaluates. Thus, when the expression evaluates, the value stored in x will still be 10.
 
 Hence, the value stored in y and z will be 16.
 

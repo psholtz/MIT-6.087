@@ -105,6 +105,21 @@ void test3() {
   puts("");
 }
 
+void test3p() {
+  puts("========");
+  puts(" Test 3");
+  puts("--------");
+  puts("");
+
+  int x = 10, y = 4, z = 1;
+  printf(" %d %d %d\n",x,y,z);
+  y >>= (x & 0x2)  && z;
+  printf(" %d %d %d\n",x,y,z);
+
+  puts("========");
+  puts("");
+}
+
 int main(void) {
 
   test1();
@@ -114,6 +129,7 @@ int main(void) {
   test2p();
 
   test3();
+  test3p();
 
   return 0;
 }

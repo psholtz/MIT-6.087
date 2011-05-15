@@ -96,7 +96,7 @@ z = 1;
 y >>= x & 0x2 && z;
 ```
 
-Perhaps the most stranglest looking operator in this expression is >>=, which in fact is simply the bitwise right operator with assignment. Knowing that, we will evaluate the right-hand side of the expression, shift the answer bitwise once to the right, and store the resulting value in y.
+Perhaps the most stranglest looking operator in this expression is >>=, which in fact is simply the bitwise right operator with assignment. Knowing that, we will evaluate the right-hand side of the expression, shift the answer bitwise by that value to the right, and store the resulting value in y.
 
 We expect that only the value of y will be changed, and that the values of x and z will remain as they are.
 
@@ -107,5 +107,37 @@ Bitwise AND is of higher precedence than logical AND.
 Hence, we can write this expression using parentheses as:
 
 ```c
-y >>= ( x & 0x2 ) && z;
+y >>= (x & 0x2) && z;
+```
+
+What value will be stored in y?
+
+The register value of x = 10 looks like:
+
+ 1 0 1 0 
+
+and the register value of 2 looks like:
+
+ 0 0 1 0 
+
+Bitwise AND of these values yields simply 2. 
+
+Taking the logical AND of 2 and z=1 yields 1. 
+
+Hence the expression reduces to:
+
+```c
+y >>= 1;
+```
+
+or shifting y bitwise to the right by 1 bit, and assigning that new value to y. 
+
+Shifting y=4 bitwise to the right by 1 bit yields 2. 
+
+Hence, we expect that y=2 after this expression evaluates.
+
+```c
+x <-- 10
+y <-- 2
+z <-- 1
 ```

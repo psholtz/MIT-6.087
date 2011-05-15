@@ -57,8 +57,8 @@ int main(void) {
   /**
    * Run some additional unit tests.
    *
-   * 16 -> 0, 15 -> 4, 0xF -> 4, 8 -> 1, 4-> 1, 2-> 1, 1-> 1,
-   * 17 -> 1, 19 -> 2
+   * 16 -> 0, 15 -> 4, 0xF -> 4, 8 -> 1, 4 -> 1, 2 -> 1, 1 -> 1,
+   * 17 -> 1, 19 -> 2, 3 -> 2, 5 -> 2, 21 -> 2, 7 -> 3, 23 -> 3
    */
   run_test(16);  
   run_test(15);
@@ -70,6 +70,11 @@ int main(void) {
 
   run_test(17);
   run_test(19);
+  run_test(3);
+  run_test(5);
+  run_test(21);
+  run_test(7);
+  run_test(23);
 
   return 0;
 }

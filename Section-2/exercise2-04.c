@@ -3,6 +3,9 @@
  */
 #include <stdio.h>
 
+/**
+ * Run first test, without parentheses. 
+ */
 void test1() {
   puts("===============");
   puts("    Test 1");
@@ -16,6 +19,29 @@ void test1() {
 
   int c;
   c = x & MASK == 0;
+
+  printf(" %d %d %d\n",x,MASK,c);
+
+  puts("===============");
+  puts("");
+}
+
+/**
+ * Run the first test, with parentheses.
+ */
+void test1p() {
+  puts("===============");
+  puts("    Test 1");
+  puts("---------------");
+  puts("");
+
+  int x = 0xFF33;
+  int MASK = 0xFF00;
+
+  printf(" %d %d\n",x,MASK);
+
+  int c;
+  c = x & (MASK == 0);
 
   printf(" %d %d %d\n",x,MASK,c);
 
@@ -56,6 +82,8 @@ void test3() {
 int main(void) {
 
   test1();
+  test1p();
+
   test2();
   test3();
 

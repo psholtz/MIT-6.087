@@ -21,7 +21,7 @@
 /**
  * Function takes two integer arguments:
  *
- *  val - integer value to be bit-shifted by the right by 1 bit.
+ *  val - integer value to be bit-shifted to the right by 1 bit.
  *  byte - size of the integer argument in bytes.
  *
  * Function returns an integer, which is the argument shifted right by 1 bit.

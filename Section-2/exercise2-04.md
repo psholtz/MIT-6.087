@@ -8,7 +8,7 @@ Solution
 
 ```c
 x = 0xFF33;
-MASK = 0xFF33;
+MASK = 0xFF00;
 c = x & MASK == 0;
 ```
 
@@ -18,8 +18,10 @@ In C, the relational equality operator == has higher precedence than the bitwise
 c = x & (MASK == 0);
 ```
 
-The register settings for x looks like:
+The register settings for x look like:
 
 1111 1111 0011 0011
 
-and the register settings for 
+and the register settings for MASK look like:
+
+1111 1111 0000 0000 

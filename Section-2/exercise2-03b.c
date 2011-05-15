@@ -12,7 +12,6 @@
  * To reverse the byte order on this number, we will produce:
  *
  *  1111 1110 1100 1010 (65226)
- *
  */
 #include <stdio.h>
 #include <math.h>
